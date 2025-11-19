@@ -11,10 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Lacquer&family=Cabin+Sketch:wght@400;700&family=Story+Script&display=swap" rel="stylesheet">
-
-    <!-- Basecoatui.com -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basecoat-css@0.3.6/dist/basecoat.cdn.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/basecoat-css@0.3.6/dist/js/all.min.js" defer></script>
+    
 </head>
 <body>
     <header>
@@ -22,28 +19,47 @@
         <p>AI Powered Excuse Generator</p>
     </header>
     <section>
-        <div class="form">
-            <h2>Select your Preferences</h2>
-            <label for="tone">Select Tone</label>
-            <select id="tone">
-                
-                <option value="Professional and Concise" selected>Professional (Formal, High Credibility)</option>
-                <option value="Creative and Imaginative" >Creative/Risky (Detailed, Unique Story)</option>
-                <option value="Safe and Vague" >Safe/Vague (Simple, Low Detail)</option>
-                <option value="sarcastic">Sarcastic (In a Mocking Fashion)</option>
-                <option value="Humorous and Lighthearted" >Humorous (For friends/casual settings)</option>
-            </select>
-            <label for="scenario">Scenario</label>
-            <select id="scenario">
-                <option value="Work/Office" selected>Work/Office (Late, Absent, Missing Deadline)</option>
-                <option value="School/University" >School/University (Missing Class, Late Assignment)</option>
-                <option value="Appointment/Commitment" >Appointment/Commitment (Cancellation, Reschedule)</option>
-                <option value="Social Event" >Social Event (Bailing, Not Attending)</option>
-            </select>
-            <label for="description">Description/prompt</label>
-            <textarea id="description" rows="4" placeholder="Enter details or context for your excuse..."></textarea>
+        <div class="card-container">
+            <div class="card">
+                <!-- Front Side - Form -->
+                <div class="card-front">
+                    <div class="form">
+                        <h2>Select your Preferences</h2>
+                        <label for="tone">Select Tone</label>
+                        <select id="tone">
+                            
+                            <option value="Professional and Concise" selected>Professional (Formal, High Credibility)</option>
+                            <option value="Creative and Imaginative" >Creative/Risky (Detailed, Unique Story)</option>
+                            <option value="Safe and Vague" >Safe/Vague (Simple, Low Detail)</option>
+                            <option value="sarcastic">Sarcastic (In a Mocking Fashion)</option>
+                            <option value="Humorous and Lighthearted" >Humorous (For friends/casual settings)</option>
+                        </select>
+                        <label for="scenario">Scenario</label>
+                        <select id="scenario">
+                            <option value="Work/Office" selected>Work/Office (Late, Absent, Missing Deadline)</option>
+                            <option value="School/University" >School/University (Missing Class, Late Assignment)</option>
+                            <option value="Appointment/Commitment" >Appointment/Commitment (Cancellation, Reschedule)</option>
+                            <option value="Social Event" >Social Event (Bailing, Not Attending)</option>
+                        </select>
+                        <label for="description">Description/prompt</label>
+                        <textarea id="description" rows="4" placeholder="Enter details or context for your excuse..."></textarea>
 
-            <button id="generateBtn" class="btn-primary" onclick="generate()">Generate Excuse</button>
+                        <button id="generateBtn" class="btn-primary">Generate Excuse</button>
+                    </div>
+                </div>
+
+                <!-- Back Side - Result -->
+                <div class="card-back">
+                    <div class="result-container">
+                        <h2>Your Excuse</h2>
+                        <div id="excuseOutput" class="excuse-text">
+                            <!-- Generated excuse will appear here -->
+                        </div>
+                        <button id="backBtn" class="btn-secondary">Generate Another</button>
+                        <button id="copyBtn" class="btn-copy">Copy to Clipboard</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <footer>
