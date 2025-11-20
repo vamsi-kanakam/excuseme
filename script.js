@@ -49,7 +49,7 @@ async function generateExcuse(payload) {
     const API_URL =
       window.location.hostname === "localhost"
         ? "/api/excuse"
-        : "https://excuse-generator-9uk47prph-vamsi-kanakams-projects.vercel.app/api/excuse";
+        : "https://excuse-generator-psi.vercel.app/api/excuse";
 
     const res = await fetch(API_URL, {
       method: "POST",
