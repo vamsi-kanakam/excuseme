@@ -1,0 +1,16 @@
+When I don't have all the files on main branch, but i have them on the server branch.
+Will use these commands to copy needed files from server branch to main branch.
+
+# Switch to main branch
+git checkout main
+
+# Copy only the frontend files from server branch
+git checkout server -- index.html styles.css script.js README.md LICENSE
+
+# Remove any backend/API files if they exist on main
+git rm -rf api/ server.js package.json package-lock.json vercel.json node_modules/ 2>$null
+
+# Commit the frontend-only setup
+git add .
+git commit -m "Frontend files for GitHub Pages deployment"
+git push origin main
