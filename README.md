@@ -1,6 +1,6 @@
 # Excuse Me - AI Powered Excuse Generator
 
-[Live demo]: (https://vamsi-kanakam.github.io/excuseme/)
+Live Demo : [LIVE](https://vamsi-kanakam.github.io/excuseme/)
 
 ## Deployment
 
