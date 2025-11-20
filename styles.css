@@ -201,6 +201,95 @@ p{
     box-shadow: 0 12px 18px rgba(34, 197, 94, 0.35);
 }
 
+/* Result container styles */
+.result-container {
+    margin: 0 auto;
+    width: 100%;
+    padding: 48px;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 28px;
+    box-shadow: 0 45px 80px rgba(15, 23, 42, 0.2);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.result-container h2 {
+    color: #0f172a;
+    font-size: clamp(26px, 3vw, 34px);
+    margin-bottom: 32px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+}
+
+.excuse-text {
+    background: rgba(34, 197, 94, 0.08);
+    border-left: 4px solid #22c55e;
+    padding: 24px 28px;
+    border-radius: 12px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #1e293b;
+    margin-bottom: 32px;
+    width: 100%;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+.btn-secondary {
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: white;
+    border: none;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.3);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.4);
+}
+
+.btn-copy {
+    width: 100%;
+    padding: 16px;
+    background: transparent;
+    color: #22c55e;
+    border: 2px solid #22c55e;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.btn-copy:hover {
+    background: #22c55e;
+    color: white;
+    transform: translateY(-2px);
+}
+
 footer {
     text-align: center;
     margin-top: 80px;
